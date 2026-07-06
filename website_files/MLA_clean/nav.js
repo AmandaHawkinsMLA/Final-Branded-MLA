@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{const b=document.querySelector('.mobile-toggle'); const n=document.querySelector('.nav'); if(b){b.addEventListener('click',()=>n.classList.toggle('open'))} document.querySelectorAll('form').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault(); alert('This demo form is ready to connect to your form service.');}));});
