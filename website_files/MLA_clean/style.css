@@ -20,4 +20,35 @@
 .basket-card ul{margin:12px 0 0;padding-left:18px;font-size:14px;line-height:1.8}
 .coming-soon-badge{display:inline-block;background:var(--gold);color:#fff;font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:99px;margin-left:10px;vertical-align:middle}
 .initiative-lead{font-size:20px;max-width:680px;line-height:1.6}
+/* === BRANDED HERO SECTION === */
+.hero-branded{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding:80px 6vw;background:linear-gradient(135deg,var(--cream) 0%,var(--ivory) 100%);max-width:1400px;margin:auto}
+.hero-left{display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.hero-logo-section{display:flex;flex-direction:column;gap:24px;align-items:flex-start}
+.hero-logo{width:160px;height:auto;margin-bottom:12px}
+.hero-tagline{font-size:clamp(18px,2vw,24px);color:var(--navy);margin:0;max-width:380px;line-height:1.4}
+.hero-right{display:flex;flex-direction:column;gap:28px}
+.hero-title{font-family:Georgia,serif;font-size:clamp(42px,6vw,72px);line-height:1.1;color:var(--navy);margin:0;text-align:left}
+.hero-subtitle{font-size:18px;line-height:1.7;color:var(--ink);max-width:580px}
+.hero-stats{display:grid;gap:16px;margin:12px 0}
+.stat-item{display:flex;flex-direction:column;gap:4px;padding-left:0}
+.stat-label{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:var(--gold)}
+.stat-value{font-size:16px;color:var(--navy);font-weight:600}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:1000px){
+  .hero-branded{grid-template-columns:1fr;gap:40px;padding:60px 6vw}
+  .hero-left{align-items:center;text-align:center}
+  .hero-right{align-items:center}
+  .hero-title{text-align:center}
+  .hero-subtitle{text-align:center;margin:0 auto}
+  .hero-logo-section{align-items:center}
+  .hero-ctas{justify-content:center}
+  .stat-item{align-items:center;text-align:center}
+}
+@media(max-width:560px){
+  .hero-branded{padding:45px 22px;gap:30px}
+  .hero-logo{width:120px}
+  .hero-title{font-size:36px}
+  .hero-ctas{flex-direction:column;gap:10px}
+  .btn{width:100%}
+}
 @media(max-width:1000px){.basket-grid{grid-template-columns:1fr}}
