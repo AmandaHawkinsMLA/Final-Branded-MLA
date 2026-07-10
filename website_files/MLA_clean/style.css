@@ -20,35 +20,43 @@
 .basket-card ul{margin:12px 0 0;padding-left:18px;font-size:14px;line-height:1.8}
 .coming-soon-badge{display:inline-block;background:var(--gold);color:#fff;font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:99px;margin-left:10px;vertical-align:middle}
 .initiative-lead{font-size:20px;max-width:680px;line-height:1.6}
-/* === BRANDED HERO SECTION === */
-.hero-branded{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding:80px 6vw;background:linear-gradient(135deg,var(--cream) 0%,var(--ivory) 100%);max-width:1400px;margin:auto}
-.hero-left{display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
-.hero-logo-section{display:flex;flex-direction:column;gap:24px;align-items:flex-start}
-.hero-logo{width:160px;height:auto;margin-bottom:12px}
-.hero-tagline{font-size:clamp(18px,2vw,24px);color:var(--navy);margin:0;max-width:380px;line-height:1.4}
-.hero-right{display:flex;flex-direction:column;gap:28px}
-.hero-title{font-family:Georgia,serif;font-size:clamp(42px,6vw,72px);line-height:1.1;color:var(--navy);margin:0;text-align:left}
-.hero-subtitle{font-size:18px;line-height:1.7;color:var(--ink);max-width:580px}
-.hero-stats{display:grid;gap:16px;margin:12px 0}
-.stat-item{display:flex;flex-direction:column;gap:4px;padding-left:0}
-.stat-label{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:var(--gold)}
-.stat-value{font-size:16px;color:var(--navy);font-weight:600}
-.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+/* === NEW BRANDED HERO SECTION === */
+.hero-new{position:relative;min-height:700px;display:grid;grid-template-columns:1fr;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg-img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,29,49,.92) 0%,rgba(7,29,49,.85) 50%,rgba(7,29,49,.75) 100%);z-index:1}
+.hero-main{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;max-width:1400px;margin:auto;padding:80px 6vw;width:100%}
+.hero-text{display:flex;flex-direction:column;gap:24px;color:#fff}
+.hero-headline{font-family:Georgia,serif;font-size:clamp(48px,8vw,72px);line-height:1.1;margin:0;font-weight:700}
+.hero-accent{font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:1em;font-weight:400}
+.hero-desc{font-size:18px;line-height:1.6;max-width:600px;margin:0;opacity:.95}
+.hero-buttons{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
+.hero-buttons .btn{min-width:160px;justify-content:center}
+.hero-mission-card{display:flex;flex-direction:column;gap:0;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.mission-section{padding:32px;border-bottom:1px solid var(--soft)}
+.mission-section h3{font-size:16px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin:0 0 12px 0}
+.mission-section p{font-size:16px;line-height:1.6;color:var(--navy);margin:0;font-weight:500}
+.mission-impact{padding:24px 32px}
+.mission-impact h3{font-size:14px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin:0 0 16px 0}
+.impact-stat{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #f0f0f0}
+.impact-stat:last-child{border-bottom:none}
+.impact-number{font-size:24px;font-weight:900;color:var(--gold)}
+.impact-label{font-size:14px;color:var(--navy);font-weight:600}
 @media(max-width:1000px){
-  .hero-branded{grid-template-columns:1fr;gap:40px;padding:60px 6vw}
-  .hero-left{align-items:center;text-align:center}
-  .hero-right{align-items:center}
-  .hero-title{text-align:center}
-  .hero-subtitle{text-align:center;margin:0 auto}
-  .hero-logo-section{align-items:center}
-  .hero-ctas{justify-content:center}
-  .stat-item{align-items:center;text-align:center}
+  .hero-main{grid-template-columns:1fr;gap:30px;padding:60px 6vw}
+  .hero-headline{font-size:clamp(36px,7vw,52px)}
+  .hero-buttons{justify-content:flex-start}
 }
 @media(max-width:560px){
-  .hero-branded{padding:45px 22px;gap:30px}
-  .hero-logo{width:120px}
-  .hero-title{font-size:36px}
-  .hero-ctas{flex-direction:column;gap:10px}
-  .btn{width:100%}
+  .hero-new{min-height:auto}
+  .hero-main{padding:50px 22px;gap:24px}
+  .hero-headline{font-size:32px;line-height:1.2}
+  .hero-desc{font-size:16px}
+  .hero-buttons{flex-direction:column;gap:12px}
+  .hero-buttons .btn{width:100%}
+  .mission-section{padding:24px 20px}
+  .mission-impact{padding:20px}
+  .impact-number{font-size:20px}
+  .impact-label{font-size:13px}
 }
 @media(max-width:1000px){.basket-grid{grid-template-columns:1fr}}
